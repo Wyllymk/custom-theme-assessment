@@ -4,6 +4,14 @@
           } else{wp_title('');
           }?>
 </h1>
+<?php
+$current_page = (get_query_var('paged')) ? get_query_var('paged') : 1;
+$args = array(
+    'posts_per_page' => 2,
+    'paged' => $current_page
+);
+query_posts($args);
+?>
 <div class='container'>
     <div class='row'>
         <?php
@@ -28,7 +36,7 @@
                         </div>
                     <?php else:?>
                         <p><?php _e('Sorry! No Posts were found.');?></p>
-            <?php endif;
-        ?>
+            <?php endif;?>
+            <?php wp_reset_query();?>
     </div>
 </div>

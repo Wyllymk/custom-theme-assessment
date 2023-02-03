@@ -90,6 +90,7 @@ h1 > a:hover{
     margin-top: 10px;
 }
 .pagination{
+    margin-top: 10px;
     display:flex;
     flex-flow: row;
     justify-content: space-around;
