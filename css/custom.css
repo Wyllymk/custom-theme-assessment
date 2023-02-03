@@ -1,0 +1,85 @@
+*{
+    padding:0;
+    margin:0;
+}
+  
+/* container class first unordered list */
+ .primary-menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+} 
+  
+ /* each navigation item */
+.primary-menu li {
+    float: left;
+    border-right:1px solid #bbb;
+}
+
+ .primary-menu li:last-child {
+    border-right: none;
+  }
+  
+/* each navigation item anchor */
+ .primary-menu li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+} 
+
+/* each navigation item anchor */
+ .primary-menu li a:hover {
+    background-color: #111;
+} 
+footer{
+    background-color: black;
+    color: white;
+}
+footer .primary-menu li {
+    float: left;
+    border-right:1px solid #bbb;
+}
+/* // Class for Current Page */
+.current_page_item{
+    background-color: #04AA6D;
+} 
+
+.container{
+    background-color: rgb(167, 211, 211);
+    padding: 30px;
+}
+h1 > a{
+    text-decoration: none;
+    color: rgb(24, 12, 133)
+}
+h1 > a:hover{
+    color: #04AA6D;
+}
+.title{
+    text-align: center;
+    color: red;
+    text-decoration: underline;
+    background-color: #bbb;
+}
+.aside1 {
+    left: 0;
+}
+
+.aside2 {
+    right: 0;
+}
+
+.general-sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+}
+
+.w-calc {
+    width: calc((100% - 600px) / 2) !important;
+    // border: 2px solid white;
+}
