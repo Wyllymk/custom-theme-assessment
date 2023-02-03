@@ -56,3 +56,5 @@ add_action('widgets_init', 'register_custom_sidebar');
 add_theme_support('post-thumbnails');
 
 add_theme_support('post-formats',array('aside','image','video'));
+
+add_theme_support('custom-header');

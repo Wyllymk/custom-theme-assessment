@@ -65,21 +65,9 @@ h1 > a:hover{
     text-decoration: underline;
     background-color: #bbb;
 }
-.aside1 {
-    left: 0;
-}
 
-.aside2 {
-    right: 0;
-}
-
-.general-sidebar {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-}
-
-.w-calc {
-    width: calc((100% - 600px) / 2) !important;
-    // border: 2px solid white;
+h4{
+    text-decoration: none;
+    color: bisque;
+    
 }
