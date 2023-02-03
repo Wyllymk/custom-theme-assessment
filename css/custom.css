@@ -66,8 +66,31 @@ h1 > a:hover{
     background-color: #bbb;
 }
 
-h4{
+.post-categories li {
     text-decoration: none;
     color: bisque;
-    
+    list-style-type: none;
+}
+.post-categories li a{
+    text-decoration: none;
+    color: rgb(8, 54, 6);
+}
+.post-categories li a:hover{
+    text-decoration: none;
+    color: rgb(22, 156, 17);
+}
+.thumbnail-img{
+    margin-top: 10px;
+}
+.content{
+    margin-top: 10px;
+}
+.comments{
+    background-color: #bbb;
+    margin-top: 10px;
+}
+.pagination{
+    display:flex;
+    flex-flow: row;
+    justify-content: space-around;
 }

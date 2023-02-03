@@ -17,7 +17,16 @@
                     <div class="thumbnail-img"><?php the_post_thumbnail('medium');?></div>
                     <?php the_excerpt();?>
 
-                <?php endwhile; else:?>
+                <?php endwhile;?>
+                        <div class="pagination">
+                            <div class="left">
+                                <?php previous_posts_link();?>
+                            </div>
+                            <div class="right">
+                                <?php next_posts_link();?>
+                            </div>
+                        </div>
+                    <?php else:?>
                         <p><?php _e('Sorry! No Posts were found.');?></p>
             <?php endif;
         ?>
