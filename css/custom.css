@@ -110,4 +110,6 @@ h1 > a:hover{
 .page-sidebar > .container{
     border: 1px solid yellow;
     width: 80vw;
+    border-radius: 5px;
+
 }
