@@ -95,3 +95,19 @@ h1 > a:hover{
     flex-flow: row;
     justify-content: space-around;
 }
+
+.page-sidebar{
+    display: flex;
+    flex-flow: row;
+    min-height: 80vh;
+}
+.widget-sidebar{
+    max-width: 20vw;
+    border: 1px solid blue;
+    background-color: #bbb;
+    border-radius: 5px;
+}
+.page-sidebar > .container{
+    border: 1px solid yellow;
+    width: 80vw;
+}

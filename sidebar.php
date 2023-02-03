@@ -5,10 +5,3 @@
         </ul>
     <?php endif; ?>
 </div>
-<article>
-    <aside className="general-sidebar aside1 w-calc">foo
-    </aside>
-    <div className="center-page">bar</div>
-    <aside className="general-sidebar aside2 w-calc">baz
-    </aside>
-</article>
