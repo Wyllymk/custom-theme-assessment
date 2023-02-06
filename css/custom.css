@@ -51,6 +51,7 @@ footer .primary-menu li {
 .container{
     background-color: rgb(167, 211, 211);
     padding: 30px;
+    height: 80vh;
 }
 h1 > a{
     text-decoration: none;
@@ -101,7 +102,8 @@ h1 > a:hover{
     flex-flow: row;
     min-height: 80vh;
 }
-.widget-sidebar{
+aside{
+    padding: 25px;
     max-width: 20vw;
     border: 1px solid blue;
     background-color: #bbb;

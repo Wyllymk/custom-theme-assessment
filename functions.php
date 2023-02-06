@@ -1,6 +1,6 @@
 <?php
 /*-------------------------------------------------------------------------*/
-/*                        ENQUEUE STYLES                           */
+/*                        ENQUEUE STYLES                                   */
 /*-------------------------------------------------------------------------*/
 
 function custom_enqueue_styles(){
@@ -9,7 +9,7 @@ function custom_enqueue_styles(){
 }
 add_action('wp_enqueue_scripts', 'custom_enqueue_styles');
 /*-------------------------------------------------------------------------*/
-/*                        REGISTER MENUS                           */
+/*                        REGISTER MENUS                                   */
 /*-------------------------------------------------------------------------*/
 
 function register_custom_menus(){
@@ -24,7 +24,7 @@ add_action('init', 'register_custom_menus');
 
 
 /*-------------------------------------------------------------------------*/
-/*                        REGISTER WIDGETS                           */
+/*                        REGISTER WIDGETS                                 */
 /*-------------------------------------------------------------------------*/
 
 function register_custom_sidebar(){
@@ -51,10 +51,52 @@ function register_custom_sidebar(){
 add_action('widgets_init', 'register_custom_sidebar');
 
 /*-------------------------------------------------------------------------*/
-/*                        THEME SUPPORT                           */
+/*                        THEME SUPPORT                                    */
 /*-------------------------------------------------------------------------*/
 add_theme_support('post-thumbnails');
 
 add_theme_support('post-formats',array('aside','image','video'));
 
 add_theme_support('custom-header');
+
+
+/*-------------------------------------------------------------------------*/
+/*                        CUSTOM POST TYPE                                 */
+/*-------------------------------------------------------------------------*/
+
+function custom_post_type(){
+    $labels = array(
+        'name' => 'Portfolio',
+        'singular_name' => 'Portfolio',
+        'add_new' => 'Add Item',
+        'all_item' => 'All Items',
+        'edit_item' => 'Edit Item',
+        'view_item' => 'View Item',
+        'search_item' => 'Search Portfolio',
+        'not_found' => 'No Portfolio Found',
+        'not_found_in_trash' => 'No Items Found In Trash',
+        'parent_item_colon' => 'Parent Item'
+    );
+    $args = array(
+        'labels' => $labels,
+        'public' => true,
+        'has_archive' => true,
+        'public_queryable' => true,
+        'query_var' => true,
+        'rewrite' => true,
+        'capability_type' => 'post',
+        'hierarchical' => false,
+        'supports' => array(
+            'title',
+            'editor',
+            'excerpt',
+            'thumbnail',
+            'revisions'
+        ),
+        'taxonomies' => array('category', 'post_tag'),
+        'menu_position' => 5,
+        'exclude_from_search' => false
+    );
+    register_post_type('portfolio', $args);
+}
+add_action('init','custom_post_type');
